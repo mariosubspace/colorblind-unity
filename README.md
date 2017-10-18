@@ -17,14 +17,14 @@ Edit the shader to control the type of colorblindness to simulate, the error mas
 
 ![Example image](https://github.com/0x4d4147/readme-images/blob/master/ColorblindUnity/Figure%204.JPG?raw=true)
 
-#### COLOR SPACE
+#### Color Space
 
 Your project **MUST** be configured to use **Linear color**.
 _Edit > Project Settings > Player > Other Settings > Color Space_
 
 If you need to use Gamma, then you'll need to make a modification in the shader code to map RGB to linear RGB and back. Otherwise, shoot me a request to add it (via Twitter or GitHub or something).
 
-## SOURCES 
+## Sources 
 
 Algorithm:
 http://ixora.io/projects/colorblindness/color-blindness-simulation-research/
