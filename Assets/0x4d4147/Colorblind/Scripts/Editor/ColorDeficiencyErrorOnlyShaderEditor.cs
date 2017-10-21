@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class ColorDeficiencyShaderEditor : MaterialEditor
+public class ColorDeficiencyErrorOnlyShaderEditor : MaterialEditor
 {
-    enum ColorDeficiencyType
-    {
-        None,
-        Protanopia,
-        Deuteranopia,
-        Tritanopia
-    }
-
     ColorDeficiencyType colorDeficiency;
 
     Material targetMat;
@@ -20,6 +12,7 @@ public class ColorDeficiencyShaderEditor : MaterialEditor
     MaterialProperty materialPropErrorTexture;
     MaterialProperty materialPropErrorStrength;
     MaterialProperty materialPropErrorBlinkSpeed;
+    MaterialProperty materialPropErrorBaseOffset;
 
     public override void OnEnable()
     {
@@ -29,6 +22,7 @@ public class ColorDeficiencyShaderEditor : MaterialEditor
         materialPropErrorTexture = GetMaterialProperty(targetMatAsArray, "_ErrorTex");
         materialPropErrorStrength = GetMaterialProperty(targetMatAsArray, "_ErrorStrength");
         materialPropErrorBlinkSpeed = GetMaterialProperty(targetMatAsArray, "_ErrorBlinkSpeed");
+        materialPropErrorBaseOffset = GetMaterialProperty(targetMatAsArray, "_ErrorBaseOffset");
     }
 
     public override void OnInspectorGUI()
@@ -43,5 +37,6 @@ public class ColorDeficiencyShaderEditor : MaterialEditor
         base.DefaultShaderProperty(materialPropErrorTexture, "Error Texture");
         base.DefaultShaderProperty(materialPropErrorStrength, "Error Strength");
         base.DefaultShaderProperty(materialPropErrorBlinkSpeed, "Error Blink Speed");
+        base.DefaultShaderProperty(materialPropErrorBaseOffset, "Error Base Offset");
     }
 }

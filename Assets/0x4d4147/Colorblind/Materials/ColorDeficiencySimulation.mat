@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Color Deficiency Simulation
+  m_Name: ColorDeficiencySimulation
   m_Shader: {fileID: 4800000, guid: 2bac4540ce87203469fa04c452c848c1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -62,7 +62,7 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DebugColor: 0
-    - _Deficiency: 3
+    - _Deficiency: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _ErrorBlinkSpeed: 0

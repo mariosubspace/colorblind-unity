@@ -1,4 +1,4 @@
-﻿Shader "0x4d4147/ColorDeficiency"
+﻿Shader "0x4d4147/ColorDeficiencySimulation"
 {
 	Properties
 	{
@@ -66,7 +66,6 @@
 
 				float3 composite = saturate(lerp(deficiencyCol, errorCol, WaveModdedShowError() * fullErrorMagnitude));
 				return fixed4(composite, 1);
-				//return deficiencyCol;
 			}
 			ENDCG
 		}

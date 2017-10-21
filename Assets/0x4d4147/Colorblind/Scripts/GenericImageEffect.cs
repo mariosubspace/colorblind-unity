@@ -9,6 +9,9 @@ public class GenericImageEffect : MonoBehaviour
 
 	void OnRenderImage(RenderTexture src, RenderTexture dest)
 	{
-		Graphics.Blit(src, dest, material);
+        if (material != null)
+            Graphics.Blit(src, dest, material);
+        else
+            Graphics.Blit(src, dest);
 	}
 }
